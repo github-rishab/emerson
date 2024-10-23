@@ -1,0 +1,70 @@
+// _variables.scss
+
+// Color Palette
+$primary-color: #00573d;    // Brand Primary
+$primary-hover-color: #00805a; //Brand Primary Hover (Primary Lightened by 8%)
+$secondary-color: #004b8d;  // Brand Secondary
+//Accent Grey Palette
+$blue-grey: #dee6ea;
+$coolgrey: #c4ced1;
+$cool-grey-hover: #adbbbf;
+//Greyscale Palette
+$grey-light-40: #ffffff; //White
+$grey-light-32: #f3f3f3;
+$grey-light-24: #dedfe0;
+$grey-light-16: #c9cacc;
+$grey-light-8: #b4b6b8;
+$emerson-grey: #9fa1a4;
+$grey-dark-8: #8a8c90;
+$grey-dark-16: #75787c;
+$grey-dark-24: #626467;
+$grey-dark-32: #4e4f52;
+$grey-dark-40: #3a3b3d;
+$grey-dark-48: #262728;
+$grey-dark-56: #121313;
+$grey-dard-60: #000000; //Black
+// Typography
+$font-primary: 'Helvetica Neue', Arial, sans-serif;  // Primary font
+$font-secondary: 'Georgia', serif;                   // Secondary font
+$font-size-base: 16px;        // Base font size
+$font-size-small: 14px;       // Small font size
+$font-size-large: 18px;       // Large font size
+$font-weight-normal: 400;     // Normal font weight
+$font-weight-bold: 700;       // Bold font weight
+$line-height-base: 1.5;       // Base line height
+
+// Spacing (Padding & Margin)
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+$spacing-xl: 64px;
+
+// Borders
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-color: #e0e0e0;
+$border-width: 1px;
+$border-style: solid;
+
+// Shadows
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+$box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+// Z-index values
+$z-index-header: 1000;
+$z-index-modal: 1050;
+$z-index-tooltip: 1100;
+
+// Breakpoints (can be imported from _breakpoints.scss if needed)
+/*$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large-desktop: 1440px;*/
+
+// Animation Timing
+$transition-duration-fast: 0.2s;
+$transition-duration-normal: 0.3s;
+$transition-duration-slow: 0.5s;

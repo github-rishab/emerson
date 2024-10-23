@@ -1,0 +1,43 @@
+// _forms.scss
+
+// Form elements
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 16px;
+  
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+  
+  .select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+  
+  .button--submit {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+  

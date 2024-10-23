@@ -1,0 +1,28 @@
+// _breakpoints.scss
+
+// Breakpoint variables
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large-desktop: 1440px;
+
+// Media queries for breakpoints
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (min-width: #{$breakpoint-mobile + 1}) and (max-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: #{$breakpoint-tablet + 1}) and (max-width: #{$breakpoint-desktop}) {
+      @content;
+    }
+  } @else if $breakpoint == large-desktop {
+    @media (min-width: #{$breakpoint-desktop + 1}) {
+      @content;
+    }
+  }
+}

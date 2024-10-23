@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.image-container {
+    max-width: 380px;
+    height: 213px;
+    overflow: hidden;
+    position: relative;
+}
+
+.responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2b5743;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.overlay:hover::before {
+    opacity: 1;
+}
+
+.content {
+    height: 100%;
+    text-align: center;
+    /* border: 1px solid black; */
+    transform: translateY(40%);
+    transition: transform 0.5s ease;
+}
+
+.headline {
+    height: 15%;
+}
+
+.overlay:hover .content {
+    transform: translateY(5%);
+}
+
+.content h2 {
+    font-size: 18px;
+    font-family: "Noto Sans";
+    font-weight: 500;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #00805a;
+    width: 70%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.overlay:hover hr {
+    opacity: 1;
+}
+
+.text-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    /* border: 1px solid red; */
+}
+
+.overlay:hover .text-button-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+p {
+    font-family: "Noto Sans";
+    font-weight: 300;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.overlay:hover .buttons {
+    opacity: 1; /* Show on hover */
+}
+.svg-button {
+    width: 50%;
+    background-color: inherit;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    font-family: "Noto Sans";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+}
+
+.svg-button:hover {
+    background-color: #1d3e2d;
+}
+
+.arrow {
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.svg-button:hover .arrow {
+    transform: translateX(4px);
+}

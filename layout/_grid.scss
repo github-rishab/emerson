@@ -1,0 +1,91 @@
+// grid.scss
+/*$breakpoint-large: 1280px;
+$container-width: 1180px;
+$container-margin: 50px;*/
+
+@import '../utilities/breakpoints';
+@import '../utilities/spacing';
+// Utility classes for grid layouts
+
+// 100% Layout - Full width layout with max width of 1180px and 50px margin
+.full-width-container {
+  width: 100%;
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-margin;
+  padding-right: $container-margin;
+
+  @include respond-to(desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// 25%/75% Split Layout
+.grid-25-75 {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .col-75 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  @include respond-to(mobile) {
+    flex-direction: column;
+
+    .col-25,
+    .col-75 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+// 30%/60%/10% Split Layout
+.grid-30-60-10 {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-30 {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .col-60 {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .col-10 {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+
+  @include respond-to(mobile) {
+    flex-direction: column;
+
+    .col-30,
+    .col-60,
+    .col-10 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+// Basic grid helpers
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  padding: $spacing-sm;
+}

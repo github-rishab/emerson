@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./components/navigation.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="nav-item" data-target="medical-devices">MEDICAL DEVICES</div>
+            <div class="nav-item" data-target="clinical-laboratory">CLINICAL LABORATORY</div>
+            <div class="nav-item" data-target="videos">VIDEOS</div>
+            <div class="nav-item" data-target="customer-success">CUSTOMER SUCCESS</div>
+        </div>
+    </header>
+    <section class="section">
+        <div>
+            No section
+        </div>
+    </section>
+    <section class="section" id="medical-devices">
+        <div>
+            MEDICAL DEVICES
+        </div>
+    </section>
+    <section class="section" id="clinical-laboratory">
+        <div>
+            CLINICAL LABORATORY
+        </div>
+    </section>
+    <section class="section" id="videos">
+        <div>
+            VIDEOS
+        </div>
+    </section>
+    <section class="section" id="customer-success">
+        <div>
+            CUSTOMER SUCCESS
+        </div>
+    </section>
+</body>
+<script>
+    // Function to add 'active' class to the nav item based on scroll position
+    const sections = document.querySelectorAll(".section");
+    const navItems = document.querySelectorAll(".nav-item");
+    const headerHeight = 75; // Adjust for header height
+
+    function setActiveSection() {
+        let currentSectionId = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - headerHeight; // Adjust for header height
+            const sectionHeight = section.offsetHeight;
+
+            // Determine if the section is in view
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSectionId = section.id; // Store the current section id
+            }
+        });
+
+        // Update nav items
+        navItems.forEach(item => {
+            item.classList.remove("active");
+            if (item.dataset.target === currentSectionId) {
+                item.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", setActiveSection);
+</script>
+
+</html>

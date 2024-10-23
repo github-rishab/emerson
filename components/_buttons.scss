@@ -1,0 +1,42 @@
+// _buttons.scss
+@import '../base/variables';
+// Button styles
+.button {
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: "Noto Sans", Verdana, Geneva, sans-serif;
+    letter-spacing: 0.075rem;
+    line-height: 1rem;
+    max-width: 17.5rem;
+    overflow: hidden;
+    text-transform: uppercase;
+    white-space: normal;
+    width: 100%;    
+    text-align: center;
+    cursor: pointer;
+  
+    &--primary {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: $grey-light-40;
+  
+      &:hover {
+        background-color: $primary-hover-color;
+      }
+    }
+  
+    &--secondary {
+      background-color: $secondary-color;
+      color: #fff;
+  
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  
+    &--disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+  
