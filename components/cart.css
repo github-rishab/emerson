@@ -8,6 +8,7 @@
     height: 492px;
     display: flex;
     flex-direction: column;
+    background-color: #F0F0F0;
 }
 
 .image-container {
