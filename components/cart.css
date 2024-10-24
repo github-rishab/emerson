@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 530px;
+    height: 492px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    margin-right: 24px;
+    height: 96px;
+    min-width: 96px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.image-container:hover::before {
+    opacity: 0;
+}
+
+.content-info {
+    position: relative;
+    z-index: 2;
+}
+
+.content-item {
+    display: flex;
+    height: 32%;
+    width: 70%;
+    padding: 10px;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.content-info > p:nth-child(1) {
+    color: #004B8D;
+    font-size: 12px;
+    letter-spacing: 0.96px;
+    line-height: 16px;
+}
+
+.content-info > a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.content-info > a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.content-info > p:nth-child(3) {
+    color: #333333;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 100%;
+    }
+}
