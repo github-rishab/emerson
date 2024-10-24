@@ -113,26 +113,87 @@
     transform: rotate(45deg);
 }
 
-
-/* Dropdown */
-.dropdown {
-    background-color: #FFFFFF; /* White */
-    border: 1px solid #0B0B0B; /* Rich Black */
-    font-size: .875rem; /* 14px */
-    line-height: 1rem; /* 16px */
-    color: #0B0B0B; /* Rich Black */
-    padding: 8px;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
+/* Buttons */
+.button-arrow, .button-arrow-diagonal, .button-secondary, .button-tertiary, .button-cta-primary {
+    min-width: 280px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00573D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-family: "Noto Sans";
 }
 
-/* Hover State */
-.dropdown:hover {
-    background-color: #B1B1B1; /* Cool Grey (Darkened 5%) */
+.button-arrow-diagonal:hover,
+.button-arrow:hover {
+    background-color: #00805A;
 }
 
-/* Active State */
-.dropdown:active {
-    background-color: #FFFFFF; /* White */
+.arrow, .diagonal-arrow {
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.button-arrow:hover .arrow,
+.button-secondary:hover .arrow,
+.button-tertiary:hover .arrow,
+.button-cta-primary:hover .arrow {
+    transform: translateX(4px);
+}
+
+.button-arrow-diagonal:hover .diagonal-arrow {
+    transform: translate(4px, -4px) rotate(45deg);
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+.button-tertiary {
+    background-color: #C4CED1;
+    color: #000;
+    border: 1px solid black;
+}
+
+.button-secondary:hover {
+    background-color: #C4CED1;
+}
+
+.button-tertiary:hover {
+    background-color: hsl(195, 13%, 74%);
+}
+
+.button-cta-primary {
+    height: 0px;
+    min-width: fit-content;
+    background-color: transparent;
+    color: #00573D;
+}
+
+.button-cta-primary:hover {
+    color: #00805A;
+    transition: color 0.3s ease;
+}
+
+.hyperlink {
+    color: #00573D;
+    text-decoration: underline;
+    text-decoration-color: #00573D;
+    font-size: inherit;
+}
+
+.hyperlink:hover {
+    cursor: pointer;
+    text-decoration: none;
 }
