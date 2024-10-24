@@ -87,3 +87,13 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .content {
+        height: fit-content;
+    }
+    
+    .content-item {
+        width: 100%;
+    }
+}
