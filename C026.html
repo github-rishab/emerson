@@ -1,28 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./components/C026.css">
-    <script src="./C026.js"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./components/C026.css" />
+    <link rel="stylesheet" href="./base/_global.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="carousel">
-        <div class="content">
-            <div>
-                
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
+      <div class="content">
+        <div id="left-arrow-carousel" onclick="moveSlide(-1)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            class="arrow"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 6 9 12 15 18"></polyline>
+          </svg>
         </div>
-        <div class="carousel-navigate">
-
+        <div class="carousel-content">
+          <div class="carousel-item" data-index="0">
+            <div>
+              <div class="mini-heading text-semibold">CASE STUDY</div>
+              <div class="heading text-light">Liebert</div>
+              <div class="image-container">
+                <img
+                  src="https://d1-auth.emerson.com/resource/image/176398/landscape_ratio4x3/375/281/c1a10add127d582d4d66559fb21104fe/4B0F694A293DF4D7262370BF822EE55A/network%20power%20data%20center.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div>
+              <div class="description text-light">
+                Uninterruptable Power Supplies. Thermal Management. Racks and
+                Enclosures.
+              </div>
+              <div>
+                <button class="button-cta text-semibold">
+                  LEARN MORE
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    class="diagonal-arrow"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="rotate(45)"
+                  >
+                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                    <polyline points="5 12 12 5 19 12"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-index="1">
+            <div>
+              <div class="mini-heading text-semibold">CASE STUDY</div>
+              <div class="heading text-light">contact us</div>
+              <div class="image-container">
+                <img
+                  src="https://d1-auth.emerson.com/resource/image/90696/landscape_ratio4x3/414/310/51bdfd6e7b8bd7b9a184c71d6fce17b7/004C10825F9B4ECAECBDE506AE8BAE0B/automotive-tires-tire-manufacturing.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div>
+              <div class="description text-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                sequi libero doloremque voluptatem necessitatibus qui dolorum
+                quidem nisi architecto nihil iusto facilis vel, quia
+                consequuntur veniam maxime tempore? Tempore, iste.
+              </div>
+              <div>
+                <button class="button-cta text-semibold">
+                  LEARN MORE
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    class="diagonal-arrow"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="rotate(45)"
+                  >
+                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                    <polyline points="5 12 12 5 19 12"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-index="2">
+            <div>
+              <div class="mini-heading text-semibold">CASE STUDY</div>
+              <div class="heading text-light">ASCO Power</div>
+              <div class="image-container">
+                <img
+                  src="https://d1-auth.emerson.com/resource/image/176400/landscape_ratio4x3/414/310/3cb00b836d871268fc3fcb963056281d/DA964A3E4D1893D904894E76F6B64258/people%20at%20work%20network%20power.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div>
+              <div class="description text-light">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam iste obcaecati, atque maiores quas sit labore totam
+                hic earum temporibus?
+              </div>
+              <div>
+                <button class="button-cta text-semibold">
+                  LEARN MORE
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    class="diagonal-arrow"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="rotate(45)"
+                  >
+                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                    <polyline points="5 12 12 5 19 12"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+        <div id="right-arrow-carousel" onclick="moveSlide(1)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            class="arrow"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="9 6 15 12 9 18"></polyline>
+          </svg>
+        </div>
+      </div>
+      <div id="carousel-navigate"></div>
     </div>
-</body>
+  </body>
+
+  <script>
+    let currentSlide = 0
+    const slides = document.querySelectorAll('.carousel-item')
+    const dotsContainer = document.getElementById('carousel-navigate')
+
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div')
+      dot.classList.add('carousel-dot')
+      if (index === 0) dot.classList.add('active')
+      dot.addEventListener('click', () => goToSlide(index))
+      dotsContainer.appendChild(dot)
+    })
+
+    function updateActiveDot() {
+      const dots = dotsContainer.children
+      Array.from(dots).forEach(dot => dot.classList.remove('active'))
+      dots[currentSlide].classList.add('active')
+    }
+
+    function clearClasses() {
+      slides.forEach(slide =>
+        slide.classList.remove('active', 'left-slide', 'right-slide')
+      )
+    }
+
+    function goToSlide(index) {
+      clearClasses()
+      currentSlide = index
+      slides[currentSlide].classList.add('active')
+      updateActiveDot()
+    }
+
+    function moveSlide(direction) {
+      clearClasses()
+      const nextSlide =
+        (currentSlide + direction + slides.length) % slides.length
+
+      slides[currentSlide].classList.add(
+        direction > 0 ? 'left-slide' : 'right-slide'
+      )
+      currentSlide = nextSlide
+      slides[currentSlide].classList.add('active')
+      updateActiveDot()
+    }
+
+    slides[currentSlide].classList.add('active')
+
+    let startX = 0
+    let endX = 0
+    const threshold = 50 // Minimum swipe distance
+
+    document
+      .querySelector('.carousel-content')
+      .addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX
+      })
+
+    document
+      .querySelector('.carousel-content')
+      .addEventListener('touchend', e => {
+        endX = e.changedTouches[0].clientX
+        const diffX = startX - endX
+
+        if (Math.abs(diffX) > threshold) {
+          if (diffX > 0) {
+            moveSlide(1)
+          } else {
+            moveSlide(-1)
+          }
+        }
+      })
+  </script>
 </html>
