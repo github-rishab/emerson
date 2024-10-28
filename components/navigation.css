@@ -6,9 +6,23 @@
     scroll-behavior: smooth;
 }
 
-header {
+nav {
+    height: 3.5rem;
     position: sticky;
-    top: 20;
+    top: 0;
+    font-size: 16px;
+    font-family: "Noto Sans";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    z-index: 10;
+  }
+  
+  header {
+    position: sticky;
+    top: 3.5rem;
     width: 100%;
     background-color: #00573D;
     height: 75px;
@@ -18,43 +32,37 @@ header {
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.96px;
-    text-decoration: none;
-}
-
-.nav {
+    z-index: 9;
+  }
+  
+  .nav {
     height: 100%;
     width: 80%;
     margin: auto;
     display: flex;
-}
-
-.nav > div.active {
-    background-color: #00805a;
-    border-bottom: 3px solid #fff;
-    transition: background-color 0.3s linear;
-    transition: border-bottom 0.3s ease-in-out;
-}
-
-
-.nav > div {
+  }
+  
+  .nav-item {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 25%;
-}
-
-.nav > div:hover {
-    background-color: #00805a;
     cursor: pointer;
-    transition: background-color 0.3s linear;
-}
-
-
-section {
+  }
+  
+  .nav-item.active {
+    background-color: #00805a;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    transition: background-color 0.3s linear, border-bottom 0.3s ease-in-out;
+  }
+  
+  section {
     width: 100%;
     height: 100vh;
     border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
+  
