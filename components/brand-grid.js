@@ -62,52 +62,55 @@ dummyData.forEach((data, index) => {
     imageContainer.className = 'image-container';
     imageContainer.innerHTML = `<img src="${data.image}" alt="image"/>`;
 
-    // Create hover box
     const contentRow = document.createElement('div');
     contentRow.className = 'hover-box';
     contentRow.innerHTML = `
-        <div class="hover-box-content">${data.description}</div>
-        <div><button>${data.buttonLabel}</button></div>
+        <div class="hover-box-content text-light">${data.description}</div>
+        <div><button class="button-arrow text-semibold">
+      ${data.buttonLabel}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        class="arrow"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 6 15 12 9 18"></polyline>
+      </svg>
+    </button></div>
     `;
-    
-    imageContainer.addEventListener('mouseenter', () => {
-        const descContainer = gridContainer.children[3]?.nextSibling; // it is hard coded for now
-        gridContainer.insertBefore(contentRow, descContainer);
-        contentRow.style.display = 'block';
-    });
 
-    imageContainer.addEventListener('mouseleave', () => {
-        contentRow.style.display = 'none';
-    });
+    imageContainer.addEventListener('mouseenter', appendDescriptionDiv);
+    imageContainer.addEventListener('mouseleave', removeDescriptionDiv);
+    contentRow.addEventListener('mouseenter', appendDescriptionDiv)
+    contentRow.addEventListener('mouseleave', removeDescriptionDiv);
 
-    contentRow.addEventListener('mouseenter', () => {
-        contentRow.style.display = 'block';
-    })
-
-    contentRow.addEventListener('mouseleave', () => {
-        contentRow.style.display = 'none';
-    });
-
-    // Append elements
     gridContainer.appendChild(imageContainer);
+    
+    function appendDescriptionDiv() {
+        const descContainer = gridContainer.children[getColumnCount(index)]?.nextSibling;
+        gridContainer.insertBefore(contentRow, descContainer);
+        contentRow.style.display = 'flex';
+    }
+    
+    function removeDescriptionDiv() {
+        contentRow.remove();
+    }
 })
 
 function getColumnCount(index) {
-    console.log('index:', index);
-    
-    let columns = 3;
+    let columns = 4;
     if (window.matchMedia("(max-width: 768px)").matches) {
-        columns = 1;
-    } else if (window.matchMedia("(max-width: 1024px)").matches) {
         columns = 2;
+    } else if (window.matchMedia("(max-width: 1024px)").matches) {
+        columns = 3;
     }
     const remainder = index % columns;
-    console.log('remainder', remainder);
-    
-    if(remainder === 0 && index) {
-        return index;
-    }
-    console.log('return val',index +(columns - remainder));
-    
-    return index +(columns - remainder);
+    const lastIndex = index + (columns - remainder - 1);
+    return lastIndex;
 }

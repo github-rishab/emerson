@@ -6,7 +6,7 @@
 #grid-container {
     width: 60%;
     padding: 50px 80px;
-    border: 1px solid black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
@@ -16,7 +16,13 @@
 .image-container {
     height: 95px;
     width: 100%;
-    border: 1px solid black;
+    border-bottom: 'none';
+    transition: border-bottom 0.5s ease-in-out;
+}
+
+.image-container:hover {
+    cursor: pointer;
+    border-bottom: 4px solid #00573d;
 }
 
 .image-container > img {
@@ -26,17 +32,25 @@
 
 .hover-box {
     display: none;
-    background-color: #f0f0f0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 20px;
+    border-top: 1px solid #b4b6b8;
+    border-bottom: 1px solid #b4b6b8;
+    padding: 35px 20px 35px 20px;
     /* width: 100%; */
     grid-column: 1 / -1;
-    transition: opacity 0.3s ease;
+    transition: height 2s ease;
 }
+
 
 .hover-box-content {
     margin-bottom: 10px;
+    width: 65%;
+    padding: 10px;
+}
+
+.hover-box > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1024px) {
