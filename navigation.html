@@ -7,13 +7,9 @@
     <title>Document</title>
   </head>
   <body>
-    <nav>
-        content
-    </nav>
-    <section class="section">
-        Normal Section
-    </section>
-    <header>
+    <nav>content</nav>
+    <div class="section">Normal Section</div>
+    <header class="header">
       <div class="nav">
         <div class="nav-item" data-target="medical-devices">
           MEDICAL DEVICES
@@ -27,53 +23,68 @@
         </div>
       </div>
     </header>
-    <section class="section">
-      <div>No section</div>
-    </section>
-    <a name="medical"> </a>
-    <section class="section" id="medical-devices">
-      <div>MEDICAL DEVICES</div>
-    </section>
 
-    <section class="section" id="clinical-laboratory">
+    <div class="section">
+      <div>No section</div>
+    </div>
+    <a name="medical"> </a>
+    <div class="section" id="medical-devices">
+      <div>MEDICAL DEVICES</div>
+    </div>
+
+    <div class="section" id="clinical-laboratory">
       <div>CLINICAL LABORATORY</div>
-    </section>
-    <section class="section" id="videos">
+    </div>
+    <div class="section" id="videos">
       <div>VIDEOS</div>
-    </section>
-    <section class="section" id="customer-success">
+    </div>
+    <div class="section" id="customer-success">
       <div>CUSTOMER SUCCESS</div>
-    </section>
+    </div>
   </body>
   <script>
     // Function to add 'active' class to the nav item based on scroll position
-    const sections = document.querySelectorAll('.section')
+    // const sections = document.querySelectorAll('.section')
     const navItems = document.querySelectorAll('.nav-item')
-    const headerHeight = 75 
+    const headerHeight = 75
 
     function setActiveSection() {
       let currentSectionId = ''
+      const headerNav = document.querySelector('.header')
 
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - headerHeight 
+        const sectionTop = section.offsetTop - headerHeight
         const sectionHeight = section.offsetHeight
 
         if (
           window.scrollY >= sectionTop &&
           window.scrollY < sectionTop + sectionHeight
         ) {
-          currentSectionId = section.id 
+          currentSectionId = section.id
         }
       })
 
       // Update nav items
       navItems.forEach(item => {
         item.classList.remove('active')
+        // headerNav.style.position = `static`;
+        // headerNav.style.top = `3.5rem`;
         if (item.dataset.target === currentSectionId) {
+          headerNav.style.position = `fixed`
+          headerNav.style.top = `3.5rem`
           item.classList.add('active')
         }
       })
     }
+    const parentElement = document.querySelector('.nav');
+    const childElements = parentElement.children;
+    const classArray = [];
+
+    Array.from(childElements).forEach(child => {
+      classArray.push(...child.classList); // Adds the class list of each child element to the array
+    });
+
+    console.log(classArray); // Logs the array of classes
 
     window.addEventListener('scroll', setActiveSection)
   </script>

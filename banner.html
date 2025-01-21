@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 700px; /* Adjust height as needed */
+        background-size: cover;
+        background-position: center;
+    }
+    .myimage
+    {   width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .overlay-box {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 15%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        width: 60%;
+        height: 70%;
+        color: white;
+        border-top: 2px solid white;
+    }
+    .heading {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    .action-button {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .action-button:hover {
+        background-color: white;
+        color: black;
+    }
+</style>
+<body>
+    <div class="banner">
+        <img src={cmsImageUrl} class="myimage"/>
+        <div class="overlay-box">
+            <div>
+                <h1 class="heading">{heading}</h1>
+                <p class="description">{description}</p>
+                <button class="action-button" onclick={handleButtonClick}>{button}</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const heading = 'Your Heading Here';
+        const description = 'Your Description Here';
+        const button = 'Click Me';
+        const dynamicURL = 'https://example.com';
+        const contentId = 'your-content-id';
+
+        function getCmsImageUrl() {
+            let returningurl = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGLd-lxkvRNRTGHR3wz9RUl20mUDfxOZgEIw&s`;
+            console.log('Returned URL: ' + returningurl);
+            return returningurl;
+        }
+
+        function handleButtonClick() {
+            console.log('dynamic url:', dynamicURL);
+            window.location.href = dynamicURL;
+        }
+
+        document.querySelector('.heading').textContent = heading;
+        document.querySelector('.description').textContent = description;
+        document.querySelector('.action-button').textContent = button;
+        document.querySelector('.myimage').src = getCmsImageUrl();
+        document.querySelector('.action-button').addEventListener('click', handleButtonClick);
+    });
+</script>
+</script>
+</html>

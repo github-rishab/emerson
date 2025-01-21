@@ -1,0 +1,103 @@
+.case-study-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  height: 450px;
+  width: 100%;
+  margin: auto;
+}
+.case-study-title {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 20;
+}
+.case-study-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.image-container {
+  width: 50%;
+  height: 260px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+.case-study-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.case-study-text {
+  font-size: 14px;
+  color: #333;
+  flex: 1;
+}
+.case-study-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Add space between the buttons */
+  margin-top: 20px; /* Add space above the buttons */
+  width: 50%;
+  justify-content: center;
+}
+button {
+  background-color: #00573d; /* Green background color */
+  color: white; /* White text color for contrast */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* Remove the default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.75rem; /* Adjust font size */
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  line-height: 1rem;
+}
+button:hover {
+  background-color: #00805a; /* Darken the button on hover */
+}
+.button1:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Add to your existing CSS */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #00573d;
+}

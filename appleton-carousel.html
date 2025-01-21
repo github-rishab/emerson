@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./components/appleton-carousal.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="case-study-card">
+      <div class="slider-container">
+        <!-- Add multiple slides -->
+        <div class="slide">
+          <div class="case-study-content">
+            <div class="case-study-text">
+              <h1 class="case-study-title">{heading1}</h1>
+              <p>{description1}</p>
+              <div class="case-study-buttons">
+                <button class="button1" onclick="{handleButtonClick2}">
+                  {button1}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    class="arrow"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    onclick="{handleArrowClick}"
+                  >
+                    <polyline points="9 6 15 12 9 18"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="{imageUrl1}" alt="Slide 1" class="case-study-image" />
+            </div>
+          </div>
+        </div>
+        <!-- Add more slides as needed -->
+        
+        <!-- Add dot navigation -->
+        <div class="dots-container">
+          <!-- Dots will be added dynamically via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./components/apppleton-carousal.js" defer></script>
+</html>
