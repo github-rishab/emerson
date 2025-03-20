@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navbar-container .border-div {
+    border-bottom: 1px solid #c9cacc;
+}
+
+.navbar-container .navbar-inner-content {
+    max-width: 1456px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    height: 64px;
+    position: relative;
+}
+
+.navbar-container .navbar-inner-content .hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.navbar-container .navbar-inner-content .hamburger.hamburger-cross {
+    display: none;
+}
+
+.navbar-container .navbar-inner-content .hamburger-cross {
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container .navbar-inner-content .image-container-logo {
+    width: 150px;
+    height: 64px;
+}
+
+.navbar-container .navbar-inner-content .image-container-logo .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navbar-container .navbar-inner-content .logo-container {
+    display: flex;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search {
+    height: 64px;
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search:hover {
+    cursor: pointer;
+    background-color: #003564;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search:hover .svg-search {
+    fill: #fff;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search .cross-icon {
+    display: none;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search .search-icon {
+    display: block;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search.active {
+    background-color: #013564;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search.active .cross-icon {
+    display: block;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search.active .search-icon {
+    display: none;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search.active .svg-search,
+.navbar-container .navbar-inner-content .logo-container .search.active path {
+    fill: #fff;
+}
+
+.navbar-container .navbar-inner-content .logo-container .side-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+}
+
+.navbar-container .navbar-inner-content .logo-container .side-logo .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Search input with icon styling */
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container .search-input {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    height: 32px;
+    padding-bottom: 4px;
+    padding-right: 40px;
+    /* Make room for the icon */
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.input-search-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Makes the icon not interfere with input */
+}
+
+.navbar-container .search-input:focus {
+    outline: none;
+}
+
+.navbar-container .search-input::placeholder {
+    color: #fff;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 1536px) {
+    .navbar-container .navbar-inner-content {
+        max-width: 1200px;
+    }
+
+    .navbar-container .search-input {
+        width: 100%;
+    }
+
+    .search-input-wrapper {
+        width: 722px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .navbar-container .navbar-inner-content {
+        height: 56px;
+        max-width: 768px;
+        padding: 0;
+    }
+
+    .navbar-container .navbar-inner-content .search {
+        height: 56px !important;
+    }
+
+    .navbar-container .navbar-inner-content .image-container-logo {
+        width: 75px;
+    }
+
+    .navbar-container .navbar-inner-content .hamburger {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-container .navbar-inner-content .logo-container .search.active {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-container .navbar-inner-content {
+        height: 48px;
+        max-width: 336px;
+        padding: 0 12px;
+    }
+
+    .navbar-container .navbar-inner-content .search {
+        height: 48px !important;
+    }
+
+    .navbar-container .navbar-inner-content .image-container-logo {
+        width: 66px;
+    }
+
+    .search-overlay {
+        width: 0;
+        /* Changed from a fixed width (328px) to 0 */
+        height: 48px;
+        position: absolute;
+        right: 0;
+        /* Added right positioning to ensure it expands from right side */
+    }
+
+    .search-overlay.active {
+        width: 328px;
+        /* Only set width when active */
+    }
+
+    /* Added appropriate sizing for the input wrapper */
+    .search-input-wrapper {
+        width: 288px;
+        /* Slightly smaller than overlay for padding */
+    }
+}
+
+.navbar-container .nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    max-width: 1456px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.navbar-container .nav-items .nav-item-container {
+    display: flex;
+}
+
+.navbar-container .nav-items .nav-item-container .nav-item {
+    padding: 16px 24px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1rem;
+    color: #262728;
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-container .nav-items .nav-item-container .nav-item:hover {
+    color: #004b8d;
+}
+
+.navbar-container .nav-items .nav-item-container .nav-item.active-dropdown {
+    box-shadow: inset 0 -4px 0 #004b8d;
+    color: #004b8d;
+}
+
+@media screen and (max-width: 1536px) {
+    .navbar-container .nav-items {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .navbar-container .nav-items {
+        display: none;
+    }
+}
+
+/* Search functionality styles - FIXED ANIMATION DIRECTION */
+.search-overlay {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 64px;
+    width: 0;
+    background-color: #004B8D;
+    transition: width 0.5s ease-in-out;
+    z-index: 5;
+    transform-origin: right;
+    /* Ensures animation starts from right */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-overlay p {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    color: white;
+}
+
+.search-overlay.active {
+    width: 1040px;
+}
+
+.search-overlay.active p {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1536px) {
+    .search-overlay.active {
+        width: 790px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .search-overlay {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 56px;
+    }
+
+    .search-overlay.active {
+        width: 768px;
+        /* left: 0; */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .search-overlay {
+        width: 0;
+        /* Start with width 0 */
+        height: 48px;
+        position: absolute;
+        right: 0;
+        /* Ensure positioning from right side */
+    }
+
+    .search-overlay.active {
+        width: 328px;
+        /* Only expand when active */
+    }
+
+    /* Adjust input wrapper width for small screens */
+    .search-input-wrapper {
+        width: 288px;
+        /* Slightly smaller than overlay to account for padding */
+    }
+}
+
+/* Updated icon animations */
+.navbar-container .navbar-inner-content .logo-container .search .cross-icon {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    /* Prevent interference */
+}
+
+.navbar-container .navbar-inner-content .logo-container .search .search-icon {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search.active .cross-icon {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.navbar-container .navbar-inner-content .logo-container .search.active .search-icon {
+    opacity: 0;
+    pointer-events: none;
+}

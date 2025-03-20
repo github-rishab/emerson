@@ -1,0 +1,72 @@
+.modal-container-import-attachment {
+    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 700px;
+    padding-bottom: 2rem;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.modal-container-import-attachment .modal-heading {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #2d383f;
+}
+
+@media screen and (max-width: 480px) {
+    .modal-container-import-attachment {
+        width: 90%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+}
+
+.modal-container-import-attachment::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container-import-attachment .modal-contents {
+    padding: 1.5rem 1.5rem;
+}
+
+.modal-container-import-attachment .para-1 {
+    font-size: 21px;
+    margin-bottom: 0.5rem;
+}
+
+.modal-container-import-attachment .para-2 {
+    font-size: 14px;
+}
+
+.modal-container-import-attachment .para-3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-container-import-attachment .emr-secondary--button {
+    max-width: 280px;
+    margin: auto;
+}
+
+.modal-container-import-attachment .heading {
+    background-color: #c9cacc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    height: 40px;
+}
+
+.modal-container-import-attachment .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

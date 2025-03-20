@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Modal</title>
+    <link rel="stylesheet" href="./modal.css" />
+  </head>
+  <body>
+    <button>open modal</button>
+    <div class="backdrop"></div>
+    <div class="modal-container-import-attachment">
+      <div class="heading">
+        <div class="modal-heading">Add Products</div>
+        <div class="close">X</div>
+      </div>
+      <div class="modal-contents">
+        <div class="emr-paragraph para-1">Import Attachments</div>
+        <div class="emr-paragraph para-2">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+          blanditiis veniam maxime
+        </div>
+        <div class="emr-paragraph para-2">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+          blanditiis veniam maxime
+        </div>
+        <div class="emr-paragraph para-3">Select File to import:</div>
+        <div class="emr-secondary--button">BROWSE</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const button = document.querySelector('button')
+    const modal = document.querySelector('.modal-container-import-attachment')
+    const backdrop = document.querySelector('.backdrop')
+    const close = document.querySelector('.close')
+
+    function openModal() {
+      modal.style.display = 'block'
+      backdrop.style.display = 'block'
+    }
+
+    function closeModal() {
+      modal.style.display = 'none'
+      backdrop.style.display = 'none'
+    }
+
+    button.addEventListener('click', openModal)
+    close.addEventListener('click', closeModal)
+    cancel.addEventListener('click', closeModal)
+
+    // Prevent closing when clicking on modal
+    modal.addEventListener('click', e => {
+      e.stopPropagation()
+    })
+  </script>
+</html>
