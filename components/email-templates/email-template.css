@@ -1,71 +1,71 @@
-.email-templates {
+.registration-email-template {
     background-color: #fff;
     border-radius: 0.7rem;
     padding: 1.5rem 1rem;
     max-width: 1200px;
 }
 
-.email-templates .logo-container {
+.registration-email-template .logo-container {
     display: flex;
     height: 50px;
     align-items: center;
 }
 
-.email-templates .logo-container .logo-sentence {
+.registration-email-template .logo-container .logo-sentence {
     color: #626467;
 }
 
-.email-templates .logo-container .image-container {
+.registration-email-template .logo-container .image-container {
     border-right: 2px solid #dedfe0;
     padding-right: 1rem;
     margin-right: 2rem;
 }
 
-.email-templates .logo-container .image-container .image {
+.registration-email-template .logo-container .image-container .image {
     height: 64px;
 }
 
-.email-templates .para-1 {
+.registration-email-template .para-1 {
     font-size: 24px;
     line-height: 32px;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.email-templates .para-2 {
+.registration-email-template .para-2 {
     margin-bottom: 0.4rem;
 }
 
-.email-templates .para-3 {
+.registration-email-template .para-3 {
     margin-bottom: 1rem;
 }
 
-.email-templates .para-4 {
+.registration-email-template .para-4 {
     margin-bottom: 1rem;
 }
 
-.email-templates .para-5 {
+.registration-email-template .para-5 {
     margin: auto;
     width: fit-content;
 }
 
-.email-templates .contact {
+.registration-email-template .contact {
     text-decoration: underline;
 }
 
-.email-templates .emr-primary--button {
+.registration-email-template .emr-primary--button {
     max-width: 280px;
     margin: auto;
     margin-bottom: 1rem;
 }
 
-.email-templates .hr {
+.registration-email-template .hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-top: 1px solid #c9cacc;
 }
 
-.email-templates .social-icons {
+.registration-email-template .social-icons {
     display: flex;
     gap: 1rem;
     margin: auto;
@@ -73,7 +73,7 @@
     margin-bottom: 1rem;
 }
 
-.email-templates .social-icons .social-icon {
+.registration-email-template .social-icons .social-icon {
     width: 24px;
     height: 24px;
     border: 1px solid;

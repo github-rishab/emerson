@@ -4,7 +4,142 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./email-template.css" />
+    <style>
+      .registration-email-template {
+        background-color: #fff;
+        border-radius: 0.7rem;
+        padding: 1.5rem 1rem;
+        max-width: 1200px;
+        font-family: 'Noto Sans', sans-serif;
+      }
+      .registration-email-template .logo-container {
+        display: flex;
+        height: 50px;
+        align-items: center;
+      }
+      .registration-email-template .logo-container .logo-sentence {
+        color: #626467;
+      }
+      .registration-email-template .logo-container .image-container {
+        padding-right: 1rem;
+        position: relative;
+        margin-right: 2rem;
+      }
+      .registration-email-template .logo-container .image-container::after {
+        content: '';
+        position: absolute;
+        right: 0; /* Ensure it's aligned to the right */
+        top: 50%;
+        height: 50%;
+        border-right: 2px solid #dedfe0;
+        transform: translateY(-50%);
+      }
+
+      .registration-email-template .logo-container .image-container .image {
+        height: 64px;
+      }
+      .registration-email-template .para-1 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+      .registration-email-template .para-2 {
+        margin-bottom: 0.4rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+      .registration-email-template .para-3 {
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+      .registration-email-template .para-4 {
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+      .registration-email-template .para-5 {
+        margin: auto;
+        width: fit-content;
+        margin-top: 4rem;
+        font-weight: 400;
+      }
+      .registration-email-template .contact-para {
+        margin-top: 2rem;
+      }
+      .registration-email-template .contact {
+        text-decoration: underline;
+      }
+      .registration-email-template .emr-primary--button {
+        max-width: 280px;
+        margin: auto;
+        margin-bottom: 1rem;
+      }
+      .registration-email-template .hr {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        border-top: 1px solid #c9cacc;
+      }
+      .registration-email-template .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin: auto;
+        width: fit-content;
+        margin-bottom: 3rem;
+      }
+      .registration-email-template .social-icons .social-icon {
+        width: 24px;
+        height: 24px;
+      }
+      .registration-email-template .social-icons .social-icon .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .registration-email-template .para-6 {
+        font-weight: 400;
+        text-align: center;
+      }
+      .registration-email-template .underline {
+        text-decoration: underline;
+      }
+      .registration-email-template .color-underline {
+        text-decoration: underline;
+        text-decoration-color: blue;
+      }
+      .registration-email-template .reset-pass {
+        margin-bottom: 4rem;
+      }
+      .registration-email-template .emr-primary--button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 3rem;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: #00573d;
+        color: #ffffff;
+        border: none;
+        border-radius: 1.5rem;
+      }
+      .emr-primary--button:hover {
+        background-color: #00805a;
+      }
+      .registration-email-template .hr-reset {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      .emr-paragraph {
+        line-height: 24px;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    </style>
   </head>
   <body>
     <div class="registration-email-template">
@@ -19,7 +154,7 @@
         <span class="logo-sentence">Discrete Automation</span>
       </div>
       <div class="emr-paragraph para-1">Complete Your registration</div>
-      <div class="emr-paragraph para-2">Lorem, ipsum dolor.</div>
+      <div class="emr-paragraph para-2">Hi [firstname] [lastname],</div>
       <div class="emr-paragraph para-3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab adipisci
         impedit libero consectetur molestias!
@@ -29,20 +164,45 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quo
         voluptate aut suscipit odit qui.
       </div>
-      <div class="para-5 emr-paragraph">
+      <div class="para-5 contact-para emr-paragraph">
         Question? <span class="contact">Contact Us</span>
       </div>
       <hr class="hr" />
       <div class="social-icons">
-        <div class="social-icon"></div>
-        <div class="social-icon"></div>
-        <div class="social-icon"></div>
-        <div class="social-icon"></div>
+        <div class="social-icon">
+          <img
+            src="https://www.citypng.com/public/uploads/preview/round-black-facebook-fb-logo-icon-sign-701751695134781upkxjlqwck.png"
+            alt=""
+            class="image"
+          />
+        </div>
+        <div class="social-icon">
+          <img
+            src="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTEwNC1wLnBuZw.png"
+            alt=""
+            class="image"
+          />
+        </div>
+        <div class="social-icon">
+          <img
+            src="https://i.pinimg.com/564x/6b/ab/30/6bab3017350ca04c6fa05569672bd31e.jpg"
+            alt=""
+            class="image"
+          />
+        </div>
+        <div class="social-icon">
+          <img
+            src="https://i.pinimg.com/736x/99/65/5e/99655e9fe24eb0a7ea38de683cedb735.jpg"
+            alt=""
+            class="image"
+          />
+        </div>
       </div>
       <div class="emr-paragraph para-6">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente nam
-        quae temporibus dicta laboriosam consectetur magni harum blanditiis quia
-        enim.
+        Lorem ipsum dolor sit amet consectetur,
+        <span class="underline">adipisicing</span>
+        elit. Sapiente nam quae temporibus dicta laboriosam consectetur magni
+        harum blanditiis quia enim.
       </div>
     </div>
   </body>
