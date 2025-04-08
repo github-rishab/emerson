@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../main.css" />
+  </head>
+  <body>
+    <div class="order-detail-container">
+      <p class="emr-paragraph para-1">Order Details</p>
+      <div class="order-detail-inner-container">
+        <div>
+          <div>
+            <p class="emr-paragraph para-2">C025002983</p>
+            <p class="emr-paragraph">
+              Order referance #:<span class="bold-text"></span>
+            </p>
+            <p class="emr-paragraph">
+              Purchase order #:<span class="bold-text">57986</span>
+            </p>
+            <p class="emr-paragraph">
+              Supplier:<span class="bold-text">ASCO</span>
+            </p>
+            <p class="emr-paragraph">
+              Status<span class="bold-text">Booked</span>
+            </p>
+          </div>
+          <select name="" id="" class="select">
+            <option value="select">Select</option>
+            <option value="select2">Select 2</option>
+          </select>
+        </div>
+        <div>
+          <div>
+            <p class="emr-paragraph">
+              Creaed By:<span class="bold-text"></span>
+            </p>
+            <p class="emr-paragraph">
+              Price:<span class="bold-text">$324.32</span>
+            </p>
+          </div>
+          <input type="text" class="emr-input" placeholder="Search" />
+        </div>
+        <div>
+          <div>
+            <div class="emr-primary--button">ADD TO ACTIVE CART</div>
+            <div class="emr-secondary--button">ADD TO ACTIVE CART</div>
+          </div>
+          <div class="mini">
+            <span class="span">Filter For:</span>
+            <select name="" id="" class="select-2">
+              <option value="select">Select</option>
+              <option value="select2">Select 2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <p class="emr-primary-text-cta">Close All</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Order line</th>
+            <th>PO Line</th>
+            <th>Product Number</th>
+            <th>Status</th>
+            <th>Ship Date</th>
+            <th>Shipping Method</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="parent-row" data-row="1">
+            <td>1.0</td>
+            <td></td>
+            <td>G28432HGJ</td>
+            <td>
+              Booked
+              <div class="toggle-arrow" data-target="1">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+            </td>
+            <td>31-Mar-2025</td>
+            <td>DHLC</td>
+            <td class="actions">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="black"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+              </svg>
+            </td>
+          </tr>
+          <tr class="nested-row" data-content="1">
+            <td colspan="6">
+              <div class="content-wrapper">
+                <!-- First Nested Table -->
+                <table class="nested-table first-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Unit Price</th>
+                      <th>QTY</th>
+                      <th>Total Amount</th>
+                      <th>Serial</th>
+                      <th>Tag</th>
+                      <th>Invoice</th>
+                      <th>Actual Ship Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Item 1</td>
+                      <td>$45.99</td>
+                      <td>5</td>
+                      <td>$229.95</td>
+                      <td>SN45678</td>
+                      <td>T123</td>
+                      <td>INV-8765</td>
+                      <td>28-Mar-2025</td>
+                    </tr>
+                    <tr>
+                      <td>Item 2</td>
+                      <td>$32.50</td>
+                      <td>2</td>
+                      <td>$65.00</td>
+                      <td>SN87654</td>
+                      <td>T456</td>
+                      <td>INV-9876</td>
+                      <td>30-Mar-2025</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- Second Nested Table -->
+                <table class="nested-table second-table">
+                  <thead>
+                    <tr>
+                      <th>Requested Ship Date</th>
+                      <th>Order Date</th>
+                      <th>Quantity Shipped</th>
+                      <th>Warehouse</th>
+                      <th>Customer Part Number</th>
+                      <th>Invoice Amount</th>
+                      <th>Shipping Label Number</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>25-Mar-2025</td>
+                      <td>15-Mar-2025</td>
+                      <td>7</td>
+                      <td>Central</td>
+                      <td>CP-123456</td>
+                      <td>$294.95</td>
+                      <td>SL-987654321</td>
+                    </tr>
+                    <tr>
+                      <td>27-Mar-2025</td>
+                      <td>16-Mar-2025</td>
+                      <td>3</td>
+                      <td>Eastern</td>
+                      <td>CP-789012</td>
+                      <td>$98.50</td>
+                      <td>SL-123456789</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+
+          <!-- Add a second example row -->
+          <tr class="parent-row" data-row="2">
+            <td>2.0</td>
+            <td>PO-456</td>
+            <td>T93278KLM</td>
+            <td class="arrow-container">
+              <div>Shipped</div>
+              <div class="toggle-arrow" data-target="2">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+            </td>
+            <td>05-Apr-2025</td>
+            <td>UPS</td>
+            <td class="actions">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="black"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+              </svg>
+            </td>
+          </tr>
+          <tr class="nested-row" data-content="2">
+            <td colspan="6">
+              <div class="content-wrapper">
+                <!-- First Nested Table -->
+                <table class="nested-table first-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Unit Price</th>
+                      <th>QTY</th>
+                      <th>Total Amount</th>
+                      <th>Serial</th>
+                      <th>Tag</th>
+                      <th>Invoice</th>
+                      <th>Actual Ship Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Item 1</td>
+                      <td>$55.75</td>
+                      <td>3</td>
+                      <td>$167.25</td>
+                      <td>SN98765</td>
+                      <td>T789</td>
+                      <td>INV-5432</td>
+                      <td>04-Apr-2025</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- Second Nested Table -->
+                <table class="nested-table second-table">
+                  <thead>
+                    <tr>
+                      <th>Requested Ship Date</th>
+                      <th>Order Date</th>
+                      <th>Quantity Shipped</th>
+                      <th>Warehouse</th>
+                      <th>Customer Part Number</th>
+                      <th>Invoice Amount</th>
+                      <th>Shipping Label Number</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01-Apr-2025</td>
+                      <td>20-Mar-2025</td>
+                      <td>3</td>
+                      <td>Western</td>
+                      <td>CP-567890</td>
+                      <td>$167.25</td>
+                      <td>SL-456789123</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./order-detail.js"></script>
+  </body>
+</html>
